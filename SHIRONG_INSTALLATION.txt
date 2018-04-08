@@ -1,0 +1,10 @@
+MKL license
+ST5V-8RD8TRJ3
+
+sudo apt-get install fftw-dev
+
+cd ~/Downloads/
+git clone https://github.com/QEF/q-e.git
+cd q-e/
+
+./configure  LIBDIRS="list of directories, separated by spaces"
