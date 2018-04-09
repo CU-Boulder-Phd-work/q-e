@@ -19,5 +19,5 @@ cd q-e/
 
 ./configure  --prefix="/opt/quantum_espresso/qe-6.2.1"
 
-sudo make all
+make all
 sudo make install
