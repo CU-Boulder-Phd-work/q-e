@@ -1,10 +1,14 @@
 MKL license
 ST5V-8RD8TRJ3
 
+# install "parallel_studio_xe_2018_update2_cluster_edition", just use default options
+
 sudo apt-get install fftw-dev
 
 cd ~/Downloads/
 git clone https://github.com/QEF/q-e.git
 cd q-e/
 
-./configure  LIBDIRS="list of directories, separated by spaces"
+./configure  --prefix="/opt/quantum_espresso/qe-6.2.1" LIBDIRS="/opt/intel/mkl/lib/intel64"
+
+sudo make all
