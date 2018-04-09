@@ -3,12 +3,21 @@ ST5V-8RD8TRJ3
 
 # install "parallel_studio_xe_2018_update2_cluster_edition", just use default options
 
+sudo vim intel-mpi-2018.2.199.conf and add the following line
+/opt/intel/compilers_and_libraries_2018.2.199/linux/mkl/lib/intel64_lin
+
+
 sudo apt-get install fftw-dev
+cd /opt/
+sudo mkdir quantum_espresso
+cd quantum_espresso
+sudo mkdir qe-6.2.1 
 
 cd ~/Downloads/
 git clone https://github.com/QEF/q-e.git
 cd q-e/
 
-./configure  --prefix="/opt/quantum_espresso/qe-6.2.1" LIBDIRS="/opt/intel/mkl/lib/intel64"
+./configure  --prefix="/opt/quantum_espresso/qe-6.2.1"
 
 sudo make all
+sudo make install
