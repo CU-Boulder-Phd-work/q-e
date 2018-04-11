@@ -17,7 +17,7 @@ cd ~/Downloads/
 git clone https://github.com/QEF/q-e.git
 cd q-e/
 
-./configure  --prefix="/opt/quantum_espresso/qe-6.2.1" --enable-openmp=yes --enable-parallel=yes --enable-environment=yes --with-scalapack=intel
+./configure  --prefix="/opt/quantum_espresso/qe-6.2.1" --enable-openmp=yes --enable-parallel=yes --enable-environment=yes --with-scalapack=yes
 
 make all
 sudo make install
