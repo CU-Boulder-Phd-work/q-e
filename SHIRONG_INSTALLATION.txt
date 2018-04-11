@@ -3,8 +3,10 @@ ST5V-8RD8TRJ3
 
 # install "parallel_studio_xe_2018_update2_cluster_edition", just use default options
 
-sudo vim intel-mpi-2018.2.199.conf and add the following line
+sudo vim /etc/ld.so.conf.d/intel-mpi-2018.2.199.conf and add the following line
 /opt/intel/compilers_and_libraries_2018.2.199/linux/mkl/lib/intel64_lin
+and then
+sudo ldconfig
 
 
 sudo apt-get install fftw-dev
