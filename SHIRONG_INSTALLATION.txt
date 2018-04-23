@@ -28,5 +28,12 @@ cd q-e/
 
 ./configure  --prefix="/opt/quantum_espresso/qe-6.2.1" --enable-openmp=yes --enable-parallel=yes --enable-environment=yes --with-scalapack=yes LIBDIRS="/opt/intel/compilers_and_libraries_2018.2.199/linux/mkl/lib/intel64_lin" FFT_LIBS="-L/usr/lib/ -lfftw" MPI_LIBS="-L/usr/lib/ -lmpi"
 
+
+source /opt/intel/compilers_and_libraries_2018.2.199/linux/bin/compilervars.sh intel64
+source /opt/intel/compilers_and_libraries_2018.2.199/linux/mkl/bin/mklvars.sh intel64
+source /opt/intel/compilers_and_libraries_2018.2.199/linux/mpi/intel64/bin/mpivars.sh
+
+./configure  --prefix="/opt/quantum_espresso/qe-6.2.1"
+
 make all
 sudo make install
